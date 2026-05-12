@@ -10,7 +10,9 @@
     joint3_lower_limit:=${-3.927}  joint3_upper_limit:=${0.19198}
     joint4_lower_limit:=${-2.0*pi}  joint4_upper_limit:=${2.0*pi}
     joint5_lower_limit:=${-1.69297}  joint5_upper_limit:=${pi}
-    joint6_lower_limit:=${-2.0*pi}  joint6_upper_limit:=${2.0*pi}">
+    joint6_lower_limit:=${-2.0*pi}  joint6_upper_limit:=${2.0*pi}
+    initial_joint1:=0.0 initial_joint2:=0.0 initial_joint3:=0.0
+    initial_joint4:=0.0 initial_joint5:=0.0 initial_joint6:=0.0">
     <ros2_control name="${prefix}${ros2_control_plugin}" type="system">
       <hardware>
         <plugin>${ros2_control_plugin}</plugin>
@@ -45,7 +47,9 @@
           <param name="min">-3.14</param>
           <param name="max">3.14</param>
         </command_interface>
-        <state_interface name="position"/>
+        <state_interface name="position">
+          <param name="initial_value">${initial_joint1}</param>
+        </state_interface>
         <state_interface name="velocity"/>
         <!-- <state_interface name="effort"/> -->
       </joint>
@@ -58,7 +62,9 @@
           <param name="min">-3.14</param>
           <param name="max">3.14</param>
         </command_interface>
-        <state_interface name="position"/>
+        <state_interface name="position">
+          <param name="initial_value">${initial_joint2}</param>
+        </state_interface>
         <state_interface name="velocity"/>
         <!-- <state_interface name="effort"/> -->
       </joint>
@@ -71,7 +77,9 @@
           <param name="min">-3.14</param>
           <param name="max">3.14</param>
         </command_interface>
-        <state_interface name="position"/>
+        <state_interface name="position">
+          <param name="initial_value">${initial_joint3}</param>
+        </state_interface>
         <state_interface name="velocity"/>
         <!-- <state_interface name="effort"/> -->
       </joint>
@@ -84,7 +92,9 @@
           <param name="min">-3.14</param>
           <param name="max">3.14</param>
         </command_interface>
-        <state_interface name="position"/>
+        <state_interface name="position">
+          <param name="initial_value">${initial_joint4}</param>
+        </state_interface>
         <state_interface name="velocity"/>
         <!-- <state_interface name="effort"/> -->
       </joint>
@@ -97,7 +107,9 @@
           <param name="min">-3.14</param>
           <param name="max">3.14</param>
         </command_interface>
-        <state_interface name="position"/>
+        <state_interface name="position">
+          <param name="initial_value">${initial_joint5}</param>
+        </state_interface>
         <state_interface name="velocity"/>
         <!-- <state_interface name="effort"/> -->
       </joint>
@@ -110,7 +122,9 @@
           <param name="min">-3.14</param>
           <param name="max">3.14</param>
         </command_interface>
-        <state_interface name="position"/>
+        <state_interface name="position">
+          <param name="initial_value">${initial_joint6}</param>
+        </state_interface>
         <state_interface name="velocity"/>
         <!-- <state_interface name="effort"/> -->
       </joint>

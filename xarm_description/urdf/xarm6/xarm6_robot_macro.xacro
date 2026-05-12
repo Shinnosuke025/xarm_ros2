@@ -15,7 +15,9 @@
     model_num:=0
     inertial_params_filename:=''
     kinematics_params_filename:=''
-    hard_interface:='PositionJointInterface' "
+    hard_interface:='PositionJointInterface'
+    initial_joint1:=0.0 initial_joint2:=0.0 initial_joint3:=0.0
+    initial_joint4:=0.0 initial_joint5:=0.0 initial_joint6:=0.0 "
     >
 
     <!-- include xarm6 relative macros: -->
@@ -39,7 +41,10 @@
           joint3_lower_limit="${-pi*0.99}" joint3_upper_limit="${0.19198}"
           joint4_lower_limit="${-pi*0.99}" joint4_upper_limit="${pi*0.99}"
           joint5_lower_limit="${-1.69297}" joint5_upper_limit="${pi*0.99}"
-          joint6_lower_limit="${-pi*0.99}" joint6_upper_limit="${pi*0.99}"/>
+          joint6_lower_limit="${-pi*0.99}" joint6_upper_limit="${pi*0.99}"
+          initial_joint1="${initial_joint1}" initial_joint2="${initial_joint2}"
+          initial_joint3="${initial_joint3}" initial_joint4="${initial_joint4}"
+          initial_joint5="${initial_joint5}" initial_joint6="${initial_joint6}"/>
       </xacro:if>
       <xacro:xarm6_urdf prefix="${prefix}"
         joint1_lower_limit="${-pi*0.99}" joint1_upper_limit="${pi*0.99}"
@@ -59,7 +64,10 @@
           ros2_control_plugin="${ros2_control_plugin}"
           hw_ns="${hw_ns}" add_gripper="${add_gripper}" add_bio_gripper="${add_bio_gripper}"
           robot_ip="${robot_ip}" report_type="${report_type}"
-          baud_checkset="${baud_checkset}" default_gripper_baud="${default_gripper_baud}" />
+          baud_checkset="${baud_checkset}" default_gripper_baud="${default_gripper_baud}"
+          initial_joint1="${initial_joint1}" initial_joint2="${initial_joint2}"
+          initial_joint3="${initial_joint3}" initial_joint4="${initial_joint4}"
+          initial_joint5="${initial_joint5}" initial_joint6="${initial_joint6}" />
       </xacro:if>
       <xacro:xarm6_urdf prefix="${prefix}" model_num="${model_num}"
         inertial_params_filename="${inertial_params_filename}"

@@ -41,6 +41,8 @@
     robot_sn:='' 
     mesh_suffix:='stl' 
     kinematics_suffix:=''
+    initial_joint1:=0.0 initial_joint2:=0.0 initial_joint3:=0.0
+    initial_joint4:=0.0 initial_joint5:=0.0 initial_joint6:=0.0
     "
     > 
 
@@ -138,7 +140,10 @@
           model_num="${model_num}"
           inertial_params_filename="${inertial_params_filename}"
           kinematics_params_filename="${kinematics_params_filename}"
-          hard_interface="${hard_interface}" />
+          hard_interface="${hard_interface}"
+          initial_joint1="${initial_joint1}" initial_joint2="${initial_joint2}"
+          initial_joint3="${initial_joint3}" initial_joint4="${initial_joint4}"
+          initial_joint5="${initial_joint5}" initial_joint6="${initial_joint6}" />
       </xacro:if>
       <xacro:if value="${robot_type == 'lite'}">
         <!-- Load Lite6 Robot Model URDF -->
