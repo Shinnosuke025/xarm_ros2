@@ -62,15 +62,19 @@
           ixx="1.7493E-05" ixy="-4.2156E-19" ixz="6.9164E-18"
           iyy="1.7225E-05" iyz="4.6433E-06" izz="5.1466E-06" />
       </inertial>
-      <xacro:common_link_visual 
-        mesh_filename="gripper/xarm/left_finger"  
-        origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}Silver" />
-      <xacro:common_link_collision 
-        mesh_filename="gripper/xarm/left_finger"  
-        origin_xyz="0 0 0" 
-        origin_rpy="0 0 0" />
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_path}/gripper/xarm/queeenb_left_finger.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${prefix}Silver"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_path}/gripper/xarm/queeenb_left_finger.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
     </link>
     <joint name="${prefix}left_finger_joint" type="revolute">
       <origin xyz="0 0.035465 0.042039" rpy="0 0 0" />
@@ -140,15 +144,19 @@
           ixx="1.7493E-05" ixy="-5.0014E-19" ixz="-7.5079E-18"
           iyy="1.7225E-05" iyz="-4.6435E-06" izz="5.1466E-06" />
       </inertial>
-      <xacro:common_link_visual 
-        mesh_filename="gripper/xarm/right_finger"  
-        origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}Silver" />
-      <xacro:common_link_collision 
-        mesh_filename="gripper/xarm/right_finger"  
-        origin_xyz="0 0 0" 
-        origin_rpy="0 0 0" />
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_path}/gripper/xarm/queeenb_right_finger.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${prefix}Silver"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_path}/gripper/xarm/queeenb_right_finger.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
     </link>
     <joint name="${prefix}right_finger_joint" type="revolute">
       <origin xyz="0 -0.035465 0.042039" rpy="0 0 0" />
