@@ -72,14 +72,14 @@
         origin_xyz="0 0 0"
         origin_rpy="0 0 0" />
       <visual>
-        <origin xyz="0.0200 -0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0300 -0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_right_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="${prefix}Silver"/>
       </visual>
       <collision>
-        <origin xyz="0.0200 -0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0300 -0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_right_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
@@ -163,14 +163,14 @@
         origin_xyz="0 0 0"
         origin_rpy="0 0 0" />
       <visual>
-        <origin xyz="0.0200 0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0300 0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_left_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="${prefix}Silver"/>
       </visual>
       <collision>
-        <origin xyz="0.0200 0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0300 0.0500 0.1100" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_left_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
