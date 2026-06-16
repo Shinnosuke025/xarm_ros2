@@ -62,15 +62,24 @@
           ixx="1.7493E-05" ixy="-4.2156E-19" ixz="6.9164E-18"
           iyy="1.7225E-05" iyz="4.6433E-06" izz="5.1466E-06" />
       </inertial>
+      <xacro:common_link_visual
+        mesh_filename="gripper/xarm/left_finger"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        material_name="${prefix}Silver" />
+      <xacro:common_link_collision
+        mesh_filename="gripper/xarm/left_finger"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0" />
       <visual>
-        <origin xyz="0.0675 -0.0375 0.010" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0675 -0.0475 0.071" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_right_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="${prefix}Silver"/>
       </visual>
       <collision>
-        <origin xyz="0.0675 -0.0375 0.010" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0675 -0.0475 0.071" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_right_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
@@ -144,15 +153,24 @@
           ixx="1.7493E-05" ixy="-5.0014E-19" ixz="-7.5079E-18"
           iyy="1.7225E-05" iyz="-4.6435E-06" izz="5.1466E-06" />
       </inertial>
+      <xacro:common_link_visual
+        mesh_filename="gripper/xarm/right_finger"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0"
+        material_name="${prefix}Silver" />
+      <xacro:common_link_collision
+        mesh_filename="gripper/xarm/right_finger"
+        origin_xyz="0 0 0"
+        origin_rpy="0 0 0" />
       <visual>
-        <origin xyz="0.0675 0.0375 0.010" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0675 0.0475 0.071" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_left_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="${prefix}Silver"/>
       </visual>
       <collision>
-        <origin xyz="0.0675 0.0375 0.010" rpy="3.141592653589793 0 1.5707963267948966"/>
+        <origin xyz="0.0675 0.0475 0.071" rpy="3.141592653589793 0 1.5707963267948966"/>
         <geometry>
           <mesh filename="${mesh_path}/gripper/xarm/queeenb_left_finger.stl" scale="0.001 0.001 0.001"/>
         </geometry>
