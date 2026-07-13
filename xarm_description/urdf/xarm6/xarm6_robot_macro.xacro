@@ -29,6 +29,9 @@
     <xacro:include filename="$(find xarm_description)/urdf/xarm6/xarm6.gazebo.xacro" />
 
     <xacro:if value="${limited}">
+      <!-- Keep the vendor's full two-turn range for the symmetric axes even
+           when the asymmetric joints use the limited profile. MoveIt and
+           ros2_control must receive the same bounds. -->
       <xacro:if value="${is_ros2}">
         <xacro:xarm6_ros2_control prefix="${prefix}"
           velocity_control="${velocity_control}"
@@ -36,23 +39,23 @@
           hw_ns="${hw_ns}" add_gripper="${add_gripper}" add_bio_gripper="${add_bio_gripper}"
           robot_ip="${robot_ip}" report_type="${report_type}"
           baud_checkset="${baud_checkset}" default_gripper_baud="${default_gripper_baud}"
-          joint1_lower_limit="${-pi*0.99}" joint1_upper_limit="${pi*0.99}"
+          joint1_lower_limit="${-2.0*pi}" joint1_upper_limit="${2.0*pi}"
           joint2_lower_limit="${-2.059}" joint2_upper_limit="${2.0944}"
           joint3_lower_limit="${-pi*0.99}" joint3_upper_limit="${0.19198}"
-          joint4_lower_limit="${-pi*0.99}" joint4_upper_limit="${pi*0.99}"
+          joint4_lower_limit="${-2.0*pi}" joint4_upper_limit="${2.0*pi}"
           joint5_lower_limit="${-1.69297}" joint5_upper_limit="${pi*0.99}"
-          joint6_lower_limit="${-pi*0.99}" joint6_upper_limit="${pi*0.99}"
+          joint6_lower_limit="${-2.0*pi}" joint6_upper_limit="${2.0*pi}"
           initial_joint1="${initial_joint1}" initial_joint2="${initial_joint2}"
           initial_joint3="${initial_joint3}" initial_joint4="${initial_joint4}"
           initial_joint5="${initial_joint5}" initial_joint6="${initial_joint6}"/>
       </xacro:if>
       <xacro:xarm6_urdf prefix="${prefix}"
-        joint1_lower_limit="${-pi*0.99}" joint1_upper_limit="${pi*0.99}"
+        joint1_lower_limit="${-2.0*pi}" joint1_upper_limit="${2.0*pi}"
         joint2_lower_limit="${-2.059}" joint2_upper_limit="${2.0944}"
         joint3_lower_limit="${-pi*0.99}" joint3_upper_limit="${0.19198}"
-        joint4_lower_limit="${-pi*0.99}" joint4_upper_limit="${pi*0.99}"
+        joint4_lower_limit="${-2.0*pi}" joint4_upper_limit="${2.0*pi}"
         joint5_lower_limit="${-1.69297}" joint5_upper_limit="${pi*0.99}"
-        joint6_lower_limit="${-pi*0.99}" joint6_upper_limit="${pi*0.99}"
+        joint6_lower_limit="${-2.0*pi}" joint6_upper_limit="${2.0*pi}"
         model_num="${model_num}"
         inertial_params_filename="${inertial_params_filename}"
         kinematics_params_filename="${kinematics_params_filename}"
