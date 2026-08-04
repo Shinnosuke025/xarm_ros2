@@ -176,7 +176,10 @@
           model_num="${model_num}"
           inertial_params_filename="${inertial_params_filename}"
           kinematics_params_filename="${kinematics_params_filename}"
-          hard_interface="${hard_interface}" />
+          hard_interface="${hard_interface}"
+          initial_joint1="${initial_joint1}" initial_joint2="${initial_joint2}"
+          initial_joint3="${initial_joint3}" initial_joint4="${initial_joint4}"
+          initial_joint5="${initial_joint5}" initial_joint6="${initial_joint6}" />
       </xacro:unless>
     </xacro:if>
     <xacro:unless value="${dof == 5 or dof == 6}">
