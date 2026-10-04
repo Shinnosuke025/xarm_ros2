@@ -74,6 +74,11 @@ namespace uf_robot_hardware
         bool initialized_;
         bool read_ready_;
         bool reactivate_controller_later_;
+        // Controller manager that owns this hardware. Resolved once in
+        // on_init (_resolve_controller_manager_name) and used by the error
+        // recovery path to stop/restart the command-claiming controllers.
+        std::string controller_manager_name_;
+        std::vector<std::string> deactivated_controllers_;
 
         long int read_cnts_;
         long int read_failed_cnts_;
@@ -112,8 +117,10 @@ namespace uf_robot_hardware
 
         bool _need_reset(void);
 
+        void _resolve_controller_manager_name(void);
         void _deactivate_controller(void);
-        void _activate_controller(void);
+        bool _activate_controller(void);
+        bool _send_switch_request(void);
 
         void _init_ufactory_driver(void);
 
